@@ -149,6 +149,10 @@ Este projeto documenta a criação de um sistema automatizado para monitoramento
 
 ## 4. Script de Monitoramento do Nginx
 
+● Verifique se está funcional em seu navegador por meio do IP ou localhost:
+
+![image](https://github.com/user-attachments/assets/b0d9273d-ce4f-4c40-bd90-2f1576dfb581)
+
 Antes de iniciar a criação do script, foi configurada uma estrutura organizada de diretórios para armazenar os arquivos do projeto.  
 
 1.  crie um diretório chamado `project_files`:
@@ -167,16 +171,35 @@ touch ~/project_files/script_nginx.sh
 ```
 
 4. Adicione o seguinte conteúdo:
-   ```bash
-  
-   ```
+  ```bash
+ #!/bin/bash
+echo "Script iniciado"
+
+# Diretório para salvar os logs
+logs="/home/ubuntu/project_files/logs"
+
+# Verificar o status do serviço
+STATUS=$(systemctl is-active nginx)
+
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+
+if [ "$STATUS" = "active" ]; then
+  echo "$TIMESTAMP - Nginx: ONLINE" >> $logs/online.log
+  echo "Nginx está ONLINE"
+else
+  echo "$TIMESTAMP - Nginx: OFFLINE" >>$logs/offline.los
+  echo "Nginx está OFFLINE"
+fi 
+```
+
 Salve e saia do editor (Ctrl+O, Enter, Ctrl+X).
 
 
 5. Torne o script executável:
-   ```bash
+
+  ```bash
    chmod +x ~/project_files/script_nginx.sh
-   ```
+  ```
 
 ---
 
@@ -216,7 +239,12 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 
 nginx_online.log: Contém registros quando o serviço está ativo.
 
+![image](https://github.com/user-attachments/assets/e550ea4c-123a-4a3b-8248-e3a5323b43bc)
+
 nginx_offline.log: Contém registros quando o serviço está inativo.
+
+![image](https://github.com/user-attachments/assets/6a17f5f6-55eb-41e2-b44e-8c8998d6d1c4)
+
 
 
 4. Verifique as tarefas agendadas:
@@ -232,8 +260,8 @@ Isso mostrará as tarefas agendadas. Você deve ver a linha que adicionou.
   ```bash
   ls ~/project_files/logs
   ```
-●  O arquivo nginx_online.log será gerado quando o serviço Nginx estiver ativo.
-● O arquivo nginx_offline.log será gerado caso o serviço Nginx esteja inativo.
+●  O arquivo nginx_online.log será gerado quando o serviço Nginx estiver online.
+● O arquivo nginx_offline.log será gerado caso o serviço Nginx esteja offline.
  Confirme que os registros estão sendo gerados corretamente.
 
  2. Simule cenários para validação
@@ -248,6 +276,9 @@ Aguarde 5 minutos e confira o conteúdo de nginx_online.log:
 ```bash
 cat nginx_online.log
 ```
+
+![image](https://github.com/user-attachments/assets/2244c0dd-4c92-4b3c-a426-8aad8b0b1efd)
+
 ● Teste o status offline: Pare o serviço do Nginx:
 
 ```bash
