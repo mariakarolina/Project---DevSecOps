@@ -187,7 +187,7 @@ if [ "$STATUS" = "active" ]; then
   echo "$TIMESTAMP - Nginx: ONLINE" >> $logs/online.log
   echo "Nginx está ONLINE"
 else
-  echo "$TIMESTAMP - Nginx: OFFLINE" >>$logs/offline.los
+  echo "$TIMESTAMP - Nginx: OFFLINE" >>$logs/offline.log
   echo "Nginx está OFFLINE"
 fi 
 ```
@@ -243,8 +243,7 @@ nginx_online.log: Contém registros quando o serviço está ativo.
 
 nginx_offline.log: Contém registros quando o serviço está inativo.
 
-![image](https://github.com/user-attachments/assets/6a17f5f6-55eb-41e2-b44e-8c8998d6d1c4)
-
+![image](https://github.com/user-attachments/assets/bec5e062-d737-4738-bdd6-3ac38a928e13)
 
 
 4. Verifique as tarefas agendadas:
@@ -289,6 +288,7 @@ Após 5 minutos, verifique o conteúdo de nginx_offline.log:
 ```bash
 cat nginx_offline.log
 ```
+![image](https://github.com/user-attachments/assets/6a17f5f6-55eb-41e2-b44e-8c8998d6d1c4)
 
 ##  Resultados Esperados
 
