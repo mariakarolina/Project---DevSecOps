@@ -6,13 +6,13 @@ Este projeto documenta a criação de um sistema automatizado para monitoramento
 ## Índice
   * [Objetivos do Projeto ](#objetivos-do-projeto)
   * [Requisitos](#requisitos)
-  - [1. Configuração do Ambiente](#1.-configuração-do-ambiente)
-  - [2. Instalação do AWS CLI no WSL](#2.-instalação-do-aws-cli-no-wls)
-  - [3. Configuração de Infraestrutura na AWS](#3.-configuração-de-infraestrutura-na-aws)
-  - [4. Script de Monitoramento do Nginx](#4.-script-de-mnitoramento-do-nginx)
-  - [5. Automatização com Cron](#5.-automatização-com-cron)
-  - [6. Verifique os arquivos de log](#6.-verifique-os-arquivos-de-log)
-  - [Resultados Esperados](#resultados-esperados)
+ - [1. Configuração do Ambiente](#1.-configuração-do-ambiente)
+ - [2. Instalação do AWS CLI no WSL](#2.-instalação-do-aws-cli-no-wls)
+ - [3. Configuração de Infraestrutura na AWS](#3.-configuração-de-infraestrutura-na-aws)
+- [4. Script de Monitoramento do Nginx](#4.-script-de-mnitoramento-do-nginx)
+- [5. Automatização com Cron](#5.-automatização-com-cron)
+- [6. Verifique os arquivos de log](#6.-verifique-os-arquivos-de-log)
+- [Resultados Esperados](#resultados-esperados)
 
  
 
@@ -192,7 +192,9 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 
  ● O comando crontab no Linux é um serviço de agendamento de tarefas automáticas para os usuários e o sistema. Ele permite que um comando, programa ou script seja agendado para um determinado dia, mês, ano e hora. É muito usado em tarefas que precisam ser executadas a cada hora, dia ou qualquer outro período, de forma recorrente.
 
-# a sintaxe
+ A sintaxe :
+ 
+ ```scss
 
 * * * * * comando_a_ser_executado
 - - - - -
@@ -202,7 +204,7 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 | | +------- Dia do mês (1 - 31)
 | +--------- Hora (0 - 23)
 +----------- Minuto (0 - 59)
-
+ ```
 2.  No editor do crontab, role até o final e adicione a seguinte linha:
 
    ```bash
@@ -259,9 +261,12 @@ cat nginx_offline.log
 
 ##  Resultados Esperados
 
-●  Um ambiente Linux funcional no WSL ou na AWS.
+●  Um ambiente Linux funcional no WSL ou na AWS
+
 ●  Um servidor Nginx em execução.
+
 ●  Um script que valida o status do serviço e registra logs de forma automatizada.
+
 ● Automação configurada via cron para garantir a execução periódica.
 
 
