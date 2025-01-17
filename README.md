@@ -237,11 +237,11 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 
 ● Com isso, o script será executado automaticamente a cada 5 minutos, gerando dois arquivos de saída no diretório logs:
 
-nginx_online.log: Contém registros quando o serviço está ativo.
+online.log: Contém registros quando o serviço está ativo.
 
 ![image](https://github.com/user-attachments/assets/e550ea4c-123a-4a3b-8248-e3a5323b43bc)
 
-nginx_offline.log: Contém registros quando o serviço está inativo.
+offline.log: Contém registros quando o serviço está inativo.
 
 ![image](https://github.com/user-attachments/assets/bec5e062-d737-4738-bdd6-3ac38a928e13)
 
@@ -259,8 +259,8 @@ Isso mostrará as tarefas agendadas. Você deve ver a linha que adicionou.
   ```bash
   ls ~/project_files/logs
   ```
-●  O arquivo nginx_online.log será gerado quando o serviço Nginx estiver online.
-● O arquivo nginx_offline.log será gerado caso o serviço Nginx esteja offline.
+●  O arquivo online.log será gerado quando o serviço Nginx estiver online.
+● O arquivo offline.log será gerado caso o serviço Nginx esteja offline.
  Confirme que os registros estão sendo gerados corretamente.
 
  2. Simule cenários para validação
@@ -270,10 +270,10 @@ Isso mostrará as tarefas agendadas. Você deve ver a linha que adicionou.
 ```bash
 sudo systemctl start nginx
 ```
-Aguarde 5 minutos e confira o conteúdo de nginx_online.log:
+Aguarde 5 minutos e confira o conteúdo de online.log:
 
 ```bash
-cat nginx_online.log
+cat online.log
 ```
 
 ![image](https://github.com/user-attachments/assets/2244c0dd-4c92-4b3c-a426-8aad8b0b1efd)
@@ -283,10 +283,10 @@ cat nginx_online.log
 ```bash
 sudo systemctl stop nginx
 ```
-Após 5 minutos, verifique o conteúdo de nginx_offline.log:
+Após 5 minutos, verifique o conteúdo de offline.log:
 
 ```bash
-cat nginx_offline.log
+cat offline.log
 ```
 ![image](https://github.com/user-attachments/assets/6a17f5f6-55eb-41e2-b44e-8c8998d6d1c4)
 
