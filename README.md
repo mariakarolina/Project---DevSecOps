@@ -1,4 +1,4 @@
-# Project: Projeto Prático de Linux | Trilha DevSecOps - Programa de bolsas da Compass UOL UNINASSAU DEZ 2024 
+# Projeto Prático de Linux | Trilha DevSecOps - Programa de bolsas da Compass UOL UNINASSAU DEZ 2024 
 
 Este projeto documenta a criação de um sistema automatizado para monitoramento do estado de um servidor Nginx em dois ambientes: uma máquina local usando o Windows Subsystem for Linux (WSL) com Ubuntu e uma instância Ubuntu hospedada na AWS. O sistema utiliza scripts e agendamento via cron para garantir monitoramento periódico, com registros armazenados para auditoria.
 
