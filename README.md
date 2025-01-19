@@ -155,19 +155,19 @@ Este projeto documenta a criação de um sistema automatizado para monitoramento
 
 Antes de iniciar a criação do script, foi configurada uma estrutura organizada de diretórios para armazenar os arquivos do projeto.  
 
-1.  crie um diretório chamado `project_files`:
+1.  crie um diretório chamado `projeto`:
  ```bash
-   mkdir ~/project_files
+   mkdir ~/projeto
    ```
 
 2. Dentro de project_files, crie um subdiretório chamado logs para armazenar os arquivos de saída:
  ```bash
-mkdir ~/project_files/logs
+mkdir ~/projeto/logs
 ```
 
 3. Crie o arquivo do script chamado script_nginx.sh dentro do diretório project_files:
  ```bash
-touch ~/project_files/script_nginx.sh
+touch ~/projeto/script_nginx.sh
 ```
 
 4. Adicione o seguinte conteúdo:
@@ -176,7 +176,7 @@ touch ~/project_files/script_nginx.sh
 echo "Script iniciado"
 
 # Diretório para salvar os logs
-logs="/home/ubuntu/project_files/logs"
+logs="/home/ubuntu/projeto/logs"
 
 # Verificar o status do serviço
 STATUS=$(systemctl is-active nginx)
@@ -198,7 +198,7 @@ Salve e saia do editor (Ctrl+O, Enter, Ctrl+X).
 5. Torne o script executável:
 
   ```bash
-   chmod +x ~/project_files/script_nginx.sh
+   chmod +x ~/projeto/script_nginx.sh
   ```
 
 ---
@@ -231,7 +231,7 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 2.  No editor do crontab, role até o final e adicione a seguinte linha:
 
    ```bash
-   */5 * * * * ~/project_files/script_nginx.sh
+   */5 * * * * ~/projeto/script_nginx.sh
    ```
  No editor nano, salve o arquivo Crt + o, e feche-o, Crt + x.
 
@@ -257,7 +257,7 @@ Isso mostrará as tarefas agendadas. Você deve ver a linha que adicionou.
 
 1. Verifique os arquivos de log:
   ```bash
-  ls ~/project_files/logs
+  ls ~/projeto/logs
   ```
 ●  O arquivo online.log será gerado quando o serviço Nginx estiver online.
 ● O arquivo offline.log será gerado caso o serviço Nginx esteja offline.
