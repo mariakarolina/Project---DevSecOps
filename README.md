@@ -240,11 +240,13 @@ Se for a primeira vez que você está abrindo o crontab, será solicitado que es
 
 online.log: Contém registros quando o serviço está ativo.
 
-![image](https://github.com/user-attachments/assets/e550ea4c-123a-4a3b-8248-e3a5323b43bc)
+![Imagem do WhatsApp de 2025-01-19 à(s) 06 09 39_38cbfb8f - Copia](https://github.com/user-attachments/assets/c9e8d03b-53d6-473d-b377-ebfd12b0db11)
+
 
 offline.log: Contém registros quando o serviço está inativo.
 
-![image](https://github.com/user-attachments/assets/bec5e062-d737-4738-bdd6-3ac38a928e13)
+![Imagem do WhatsApp de 2025-01-19 à(s) 06 16 10_ca89db32](https://github.com/user-attachments/assets/c3fc394d-2c28-4e18-a58f-375f3162de9f)
+
 
 
 4. Verifique as tarefas agendadas:
@@ -277,7 +279,10 @@ Aguarde 5 minutos e confira o conteúdo de online.log:
 cat online.log
 ```
 
-![image](https://github.com/user-attachments/assets/2244c0dd-4c92-4b3c-a426-8aad8b0b1efd)
+![Imagem do WhatsApp de 2025-01-20 à(s) 20 24 55_a0243c79](https://github.com/user-attachments/assets/29c573a9-68bf-4e8f-af3f-66f0cfb37997)
+
+
+
 
 ● Teste o status offline: Pare o serviço do Nginx:
 
@@ -289,7 +294,8 @@ Após 5 minutos, verifique o conteúdo de offline.log:
 ```bash
 cat offline.log
 ```
-![image](https://github.com/user-attachments/assets/6a17f5f6-55eb-41e2-b44e-8c8998d6d1c4)
+![Imagem do WhatsApp de 2025-01-19 à(s) 06 17 44_ac4bf201](https://github.com/user-attachments/assets/1b7789f2-c8c9-4e9b-8227-ab5597f8a71c)
+
 
 ##  Resultados Esperados
 
