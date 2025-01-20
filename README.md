@@ -3,16 +3,17 @@
 Este projeto documenta a criação de um sistema automatizado para monitoramento do estado de um servidor Nginx em dois ambientes: uma máquina local usando o Windows Subsystem for Linux (WSL) com Ubuntu e uma instância Ubuntu hospedada na AWS. O sistema utiliza scripts e agendamento via cron para garantir monitoramento periódico, com registros armazenados para auditoria.
 
 ---
+
 ## Índice
-  * [Objetivos do Projeto ](#objetivos-do-projeto)
-  * [Requisitos](#requisitos)
- - [1. Configuração do Ambiente](#1.-configuração-do-ambiente)
- - [2. Instalação do AWS CLI no WSL](#2.-instalação-do-aws-cli-no-wls)
- - [3. Configuração de Infraestrutura na AWS](#3.-configuração-de-infraestrutura-na-aws)
-- [4. Script de Monitoramento do Nginx](#4.-script-de-mnitoramento-do-nginx)
-- [5. Automatização com Cron](#5.-automatização-com-cron)
-- [6. Verifique os arquivos de log](#6.-verifique-os-arquivos-de-log)
-- [Resultados Esperados](#resultados-esperados)
+* [Objetivos do Projeto](#objetivos-do-projeto)
+* [Requisitos](#requisitos)
+* [1. Configuração do Ambiente](#1-configuração-do-ambiente)
+* [2. Instalação do AWS CLI no WSL](#2-instalação-do-aws-cli-no-wsl)
+* [3. Configuração de Infraestrutura na AWS](#3-configuração-de-infraestrutura-na-aws)
+* [4. Script de Monitoramento do Nginx](#4-script-de-monitoramento-do-nginx)
+* [5. Automação com Cron](#5-automação-com-cron)
+* [6. Verifique os arquivos de log](#6-verifique-os-arquivos-de-log)
+* [Resultados Esperados](#resultados-esperados)
 
  
 
