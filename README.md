@@ -161,12 +161,12 @@ Antes de iniciar a criação do script, foi configurada uma estrutura organizada
    mkdir ~/projeto
    ```
 
-2. Dentro de project_files, crie um subdiretório chamado logs para armazenar os arquivos de saída:
+2. Dentro de projeto, crie um subdiretório chamado logs para armazenar os arquivos de saída:
  ```bash
 mkdir ~/projeto/logs
 ```
 
-3. Crie o arquivo do script chamado script_nginx.sh dentro do diretório project_files:
+3. Crie o arquivo do script chamado script_nginx.sh dentro do diretório projeto:
  ```bash
 touch ~/projeto/script_nginx.sh
 ```
