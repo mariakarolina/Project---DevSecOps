@@ -297,6 +297,71 @@ cat offline.log
 ![Imagem do WhatsApp de 2025-01-19 à(s) 06 17 44_ac4bf201](https://github.com/user-attachments/assets/1b7789f2-c8c9-4e9b-8227-ab5597f8a71c)
 
 
+# Versionamento do Projeto
+
+## Passos Realizados
+
+### 1. Inicialização do Repositório Git  
+No diretório raiz do projeto, inicializamos o repositório Git com o comando:  
+
+```bash
+git init
+```
+
+### 2. Configuração do Repositório Remoto  
+Configuramos o repositório remoto para sincronizar o projeto com o GitHub. O endereço remoto foi adicionado com o comando:  
+
+```bash
+git remote add origin git@github.com:mariakarolina/Project---DevSecOps.git
+```
+
+### 3. Adicionando os Arquivos para Versionamento  
+Adicionamos os arquivos do projeto ao estágio do Git:  
+
+```bash
+git add .
+```
+
+### 4. Criando o Commit Inicial  
+Criamos um commit inicial para registrar as primeiras mudanças no repositório:  
+
+```bash
+git commit -m "Initial commit"
+```
+
+### 5. Configuração e Carregamento da Chave SSH  
+Para garantir a autenticação segura com o GitHub, realizamos a configuração da chave SSH:  
+
+1. Verificação e carregamento da chave SSH no agente:  
+   ```bash
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/id_ed25519
+   ```
+
+2. Teste da conexão SSH com o GitHub:  
+   ```bash
+   ssh -T git@github.com
+   ```
+
+### 6. Envio do Projeto para o GitHub  
+O projeto foi enviado ao repositório remoto no GitHub com o comando:  
+
+```bash
+git push -u origin main
+```
+
+### 7. Sincronização do Repositório Remoto  
+Para garantir que o repositório local estivesse sincronizado com o remoto, utilizamos o comando:  
+
+```bash
+git pull
+```
+
+---
+
+
+
+
 ##  Resultados Esperados
 
 ●  Um ambiente Linux funcional no WSL ou na AWS
