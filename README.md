@@ -212,23 +212,11 @@ Salve e saia do editor (Ctrl+O, Enter, Ctrl+X).
    ```bash
    sudo crontab -e
    ```
-Se for a primeira vez que você está abrindo o crontab, será solicitado que escolha um editor de texto. Recomendo o nano por ser mais simples.
+ Recomendo o nano por ser mais simples.
 
  ● O comando crontab no Linux é um serviço de agendamento de tarefas automáticas para os usuários e o sistema. Ele permite que um comando, programa ou script seja agendado para um determinado dia, mês, ano e hora. É muito usado em tarefas que precisam ser executadas a cada hora, dia ou qualquer outro período, de forma recorrente.
 
- A sintaxe :
- 
- ```scss
 
-* * * * * comando_a_ser_executado
-- - - - -
-| | | | |
-| | | | +--- Dia da semana (0 - 7) (Domingo = 0 ou 7)
-| | | +----- Mês (1 - 12)
-| | +------- Dia do mês (1 - 31)
-| +--------- Hora (0 - 23)
-+----------- Minuto (0 - 59)
- ```
 2.  No editor do crontab, role até o final e adicione a seguinte linha:
 
    ```bash
